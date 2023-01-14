@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face{
+  font-family: "burtons";
+  src: url("../public/Burtons.otf");
+}
+
+@font-face {
+  font-family: "montbold";
+  src: url("../public/m-bold.ttf");
+}
+
+@font-face {
+  font-family: "mplusmed";
+  src: url("../public/mplus-med.ttf");
+}
+
+@font-face {
+  font-family: "mplusbold";
+  src: url("../public/mplus-bold.ttf");
+}
