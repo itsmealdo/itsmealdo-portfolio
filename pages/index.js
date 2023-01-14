@@ -4,16 +4,13 @@ import {
   AiFillGithub,
   AiFillInstagram,
   AiFillLinkedin,
+  AiFill,
 } from "react-icons/ai";
-import {
-  BsFillEmojiLaughingFill,
-} from "react-icons/bs";
+import { BsFillEmojiLaughingFill } from "react-icons/bs";
+import { FaTiktok } from "react-icons/fa";
 import Image from "next/image";
 import aldo from "../public/aldo.jpeg";
-import design from "../public/design.png";
-import code from "../public/code.png";
-import consulting from "../public/consulting.png";
-import { useState  } from "react";
+import { useState } from "react";
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
@@ -28,26 +25,39 @@ export default function Home() {
 
       <main className="bg-utama dark:bg-darks bg-repeat">
         <nav className="sticky top-0 z-20 px-10 backdrop-filter bg-navutama dark:bg-transparent backdrop-blur-lg bg-opacity-50">
-            <div className="max-w-5xl mx-auto px-7">
-              <div className="flex items-center justify-between h-20">
-            <h1 className="text-xl font-montbold dark:text-white">itsmealdo <BsFillEmojiLaughingFill className="inline-block"/></h1>
-            <ul className="flex items-center">
-              <li>
-                <BsFillMoonStarsFill className="cursor-pointer text-2xl dark:text-white" onClick={() => setDarkMode(!darkMode)} />
-              </li>
-            </ul>
-              </div>
+          <div className="max-w-5xl mx-auto px-7">
+            <div className="flex items-center justify-between h-20">
+              <h1 className="text-xl font-montbold dark:text-white">
+                itsmealdo <BsFillEmojiLaughingFill className="inline-block" />
+              </h1>
+              <ul className="flex items-center">
+                <li>
+                  <BsFillMoonStarsFill
+                    className="cursor-pointer text-2xl dark:text-white"
+                    onClick={() => setDarkMode(!darkMode)}
+                  />
+                </li>
+              </ul>
             </div>
-          </nav>
+          </div>
+        </nav>
         <section className="px-10 md:px-20 lg:px-96 pb-20">
           <div className="text-center pt-10 p-10">
             <div className="pb-6">
-              <Image src={aldo} alt="profile" width={200} height={200} className="rounded-full mx-auto ring-5 ring-darks dark:ring-white" />
+              <Image
+                src={aldo}
+                alt="profile"
+                width={200}
+                height={200}
+                className="rounded-full mx-auto ring-5 ring-darks dark:ring-white"
+              />
             </div>
             <h2 className="text-5xl py-2 text-teal-600 font-mplusbold font-medium dark:text-white">
               Aldo Saputra
             </h2>
-            <h3 className="text-2xl py-2 dark:text-white">Students and Developer Junior</h3>
+            <h3 className="text-2xl py-2 dark:text-white">
+              Students and Developer Junior
+            </h3>
             <p className="text-md py-5 leading-8 text-gray-800 dark:text-white">
               Hi, i'm 22 years old a students from Sultan Syarif Kasim Riau
               State Islamic University. I love tech, and i can make a some
@@ -55,11 +65,23 @@ export default function Home() {
               :)
             </p>
           </div>
-          <div className="text-5xl flex justify-center gap-6 py-3 text-gray-600">
+
+          <div className="flex items-center">
+              <AiFillGithub />
+            <div>
+              <strong>Aldo saputra</strong>
+              <span>Adsasa</span>
+            </div>
+          </div>
+
+          {/* <div className="flex gap-4 lg:gap-7">
+            <a href="#" className="mx-auto bg-darks w-20 h-20 bg-blur-xl bg-opacity-60 backdrop-filter rounded-xl"><AiFillGithub className="text-center text-3xl text-white inline-block"/></a>
+            </div> */}
+          {/* <div className="text-5xl flex justify-center gap-6 py-3 text-gray-600">
             <a href="https://github.com/itsmealdo"><AiFillGithub className="hover:text-darks transition duration-200 dark:text-white hover:hover:text-darks transition duration-200"/></a>
             <a href="https://instagram.com/aldosaaputra"><AiFillInstagram className="hover:text-teal-500 transition duration-200 dark:text-white hover:hover:text-teal-500 transition duration-200"/></a>
             <a href="https://www.linkedin.com/in/aldosaputra/"><AiFillLinkedin className="hover:text-teal-500 transition duration-200 dark:text-white hover:hover:text-teal-500 transition duration-200" /></a>
-          </div>
+          </div> */}
           {/* <div className="relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-20 overflow- md:h-96 md:w-96">
             <Image src={deved} alt="deved" layout="fill" objectFit="cover" />
           </div> */}
@@ -67,15 +89,31 @@ export default function Home() {
 
         <section className="px-10 md:px-20 lg:px-96 pb-20">
           <div>
-            <h3 className="text-3xl pt-8 font-bold dark:text-white text-center pb-2">About Me</h3>
-            <p className="text-md py-2 leading-8  dark:text-white text-center">
-            A man from Pekanbaru, Riau, Indonesia who loves technology since childhood. Now I am a student at Sultan Syarif Kasim Riau State Islamic University. I'm a junior developer, and I'm trying to learn React JS. This portfolio is built with Next JS and Tailwind CSS. I love programming, but I'm still a beginner. I'm trying to learn more about programming, and I hope I can become a good developer one day.
+            <h3 className="text-3xl pt-8 font-bold dark:text-white pb-2">
+              About Me
+            </h3>
+            <p className="text-md py-2 leading-8  dark:text-white text-justify">
+              A man from Pekanbaru, Riau, Indonesia who loves technology since
+              childhood. Now I am a student at Sultan Syarif Kasim Riau State
+              Islamic University. I'm a junior developer, and I'm trying to
+              learn React JS. This portfolio is built with Next JS and Tailwind
+              CSS. I love programming, but I'm still a beginner. I'm trying to
+              learn more about programming, and I hope I can become a good
+              developer one day.
             </p>
           </div>
           <div>
-            <h3 className="text-3xl pt-8 font-bold dark:text-white">About Me</h3>
+            <h3 className="text-3xl pt-8 font-bold dark:text-white">
+              About Me
+            </h3>
             <p className="text-md py-2 leading-8  dark:text-white">
-            A man from Pekanbaru, Riau, Indonesia who loves technology since childhood. Now I am a student at Sultan Syarif Kasim Riau State Islamic University. I'm a junior developer, and I'm trying to learn React JS. This portfolio is built with Next JS and Tailwind CSS. I love programming, but I'm still a beginner. I'm trying to learn more about programming, and I hope I can become a good developer one day.
+              A man from Pekanbaru, Riau, Indonesia who loves technology since
+              childhood. Now I am a student at Sultan Syarif Kasim Riau State
+              Islamic University. I'm a junior developer, and I'm trying to
+              learn React JS. This portfolio is built with Next JS and Tailwind
+              CSS. I love programming, but I'm still a beginner. I'm trying to
+              learn more about programming, and I hope I can become a good
+              developer one day.
             </p>
           </div>
           {/* <div className="lg:flex gap-10">
