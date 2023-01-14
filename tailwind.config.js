@@ -13,6 +13,8 @@ module.exports = {
       'navutama': "#F4EDE4",
       'white': "#ffffff",
       'darks': "#202023",
+      'second': "#40BDBB",
+      'utamadark': "#313134",
     },
     extend: {
       fontFamily: {
