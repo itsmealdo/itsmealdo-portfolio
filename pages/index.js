@@ -5,6 +5,9 @@ import {
   AiFillInstagram,
   AiFillLinkedin,
 } from "react-icons/ai";
+import {
+  BsFillEmojiLaughingFill,
+} from "react-icons/bs";
 import Image from "next/image";
 import aldo from "../public/aldo.jpeg";
 import design from "../public/design.png";
@@ -23,11 +26,11 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="bg-utama dark:bg-darks">
+      <main className="bg-utama dark:bg-darks bg-repeat">
         <nav className="sticky top-0 z-20 px-10 backdrop-filter bg-navutama dark:bg-transparent backdrop-blur-lg bg-opacity-50">
-            <div className="max-w-5xl mx-auto px-4">
+            <div className="max-w-5xl mx-auto px-7">
               <div className="flex items-center justify-between h-20">
-            <h1 className="text-xl font-montbold dark:text-white">itsmealdo</h1>
+            <h1 className="text-xl font-montbold dark:text-white">itsmealdo <BsFillEmojiLaughingFill className="inline-block"/></h1>
             <ul className="flex items-center">
               <li>
                 <BsFillMoonStarsFill className="cursor-pointer text-2xl dark:text-white" onClick={() => setDarkMode(!darkMode)} />
@@ -36,10 +39,10 @@ export default function Home() {
               </div>
             </div>
           </nav>
-        <section className="px-10 md:px-20 lg:px-60 min-h-screen">
+        <section className="px-10 md:px-20 lg:px-96 pb-20">
           <div className="text-center pt-10 p-10">
-            <div>
-              <Image src={aldo} alt="profile" width={200} height={200} className="rounded-full mx-auto pb-2" />
+            <div className="pb-6">
+              <Image src={aldo} alt="profile" width={200} height={200} className="rounded-full mx-auto ring-5 ring-darks dark:ring-white" />
             </div>
             <h2 className="text-5xl py-2 text-teal-600 font-mplusbold font-medium dark:text-white">
               Aldo Saputra
@@ -53,23 +56,29 @@ export default function Home() {
             </p>
           </div>
           <div className="text-5xl flex justify-center gap-6 py-3 text-gray-600">
-            <a href="https://github.com/itsmealdo"><AiFillGithub className="hover:text-darks transition duration-200 dark: hover:hover:text-darks transition duration-200"/></a>
-            <a href="https://instagram.com/aldosaaputra"><AiFillInstagram className="dark:text-white hover:text-teal-500 transition duration-200 dark: hover:hover:text-teal-500 transition duration-200"/></a>
-            <a><AiFillLinkedin /></a>
+            <a href="https://github.com/itsmealdo"><AiFillGithub className="hover:text-darks transition duration-200 dark:text-white hover:hover:text-darks transition duration-200"/></a>
+            <a href="https://instagram.com/aldosaaputra"><AiFillInstagram className="hover:text-teal-500 transition duration-200 dark:text-white hover:hover:text-teal-500 transition duration-200"/></a>
+            <a href="https://www.linkedin.com/in/aldosaputra/"><AiFillLinkedin className="hover:text-teal-500 transition duration-200 dark:text-white hover:hover:text-teal-500 transition duration-200" /></a>
           </div>
           {/* <div className="relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-20 overflow- md:h-96 md:w-96">
             <Image src={deved} alt="deved" layout="fill" objectFit="cover" />
           </div> */}
         </section>
 
-        <section className="px-10 md:px-20 lg:px-60">
+        <section className="px-10 md:px-20 lg:px-96 pb-20">
           <div>
-            <h3 className="text-3xl pt-8 font-bold dark:text-white">About Me</h3>
-            <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-300">
+            <h3 className="text-3xl pt-8 font-bold dark:text-white text-center pb-2">About Me</h3>
+            <p className="text-md py-2 leading-8  dark:text-white text-center">
             A man from Pekanbaru, Riau, Indonesia who loves technology since childhood. Now I am a student at Sultan Syarif Kasim Riau State Islamic University. I'm a junior developer, and I'm trying to learn React JS. This portfolio is built with Next JS and Tailwind CSS. I love programming, but I'm still a beginner. I'm trying to learn more about programming, and I hope I can become a good developer one day.
             </p>
           </div>
-          <div className="lg:flex gap-10">
+          <div>
+            <h3 className="text-3xl pt-8 font-bold dark:text-white">About Me</h3>
+            <p className="text-md py-2 leading-8  dark:text-white">
+            A man from Pekanbaru, Riau, Indonesia who loves technology since childhood. Now I am a student at Sultan Syarif Kasim Riau State Islamic University. I'm a junior developer, and I'm trying to learn React JS. This portfolio is built with Next JS and Tailwind CSS. I love programming, but I'm still a beginner. I'm trying to learn more about programming, and I hope I can become a good developer one day.
+            </p>
+          </div>
+          {/* <div className="lg:flex gap-10">
           <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white">
             <Image src={design} className="mx-auto" width={100} height={100} />
             <h3 className="text-lg pt-8 pb-2 text-teal-600">
@@ -111,7 +120,7 @@ export default function Home() {
             <p clasName="text-gray-800 py-1">Photoshop</p>
             <p clasName="text-gray-800 py-1">Affinity Designer</p>
           </div>
-          </div>
+          </div> */}
         </section>
       </main>
     </div>
